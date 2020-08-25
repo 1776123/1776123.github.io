@@ -342,14 +342,35 @@
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
             <h2>Subscribe</h2>
             <p class="mb-5">Sign up for our email program to be the first to know when we post new content!</p>
-            <form action="#" method="post" class="site-block-subscribe">
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                  <div class="input-group-append">
-                    <button class="btn btn-primary" type="button" id="button-addon2">Send</button>
-                  </div>
-                </div>
+              <form method="post" action="//submit.form" onSubmit="return validateForm();">
+              <div style="max-width: 400px;">
+              </div>
+              <input type="text" id="data_4" name="data_4" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email"/>
+              </div>
+              <div>
+              <div style="padding-bottom:18px;"><input class="btn btn-primary" name="skip_Submit" value="SUBSCRIBE" type="submit"/></div>
+              <!--<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>-->
+              <script src="https://www.100forms.com/js/FORMKEY:3WLJR8252EKD" type="text/javascript"></script>
+              </div>
               </form>
+              <script type="text/javascript">
+              function validateForm() {
+              if (isEmpty(document.getElementById('data_4').value.trim())) {
+              alert('EMAIL is required!');
+              return false;
+              }
+              if (!validateEmail(document.getElementById('data_4').value.trim())) {
+              alert('EMAIL must be a valid email address!');
+              return false;
+              }
+              return true;
+              }
+              function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+              function validateEmail(email) {
+              var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+              return isEmpty(email) || re.test(email);
+              }
+              </script>
           </div>
         </div>
       </div>
@@ -411,7 +432,7 @@
               <div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
                   <li><a href="about.html">About Us</a></li>
-                  <li><a href="sendto:lwwwcontact@gmail.com">Contact Us</a></li>
+                  <li><a href="mailto:lwwwcontact@gmail.com">Contact Us</a></li>
                   <li><a href="https://www.youtube.com/channel/UCtGbMCxRm0qjjd4mcQBjm4Q/featured">Subscribe on Youtube</a></li>
                 </ul>
               </div>
@@ -446,22 +467,39 @@
             </div>
 
             <div class="mb-5">
+              <form method="post" action="//submit.form" onSubmit="return validateForm();">
+              <div style="max-width: 400px;">
+              </div>
               <h3 class="footer-heading mb-2">Subscribe Newsletter</h3>
               <p>Sign up for our email program to be the first to know when we post new content!</p>
-
-              <form action="#" method="post">
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                  <div class="input-group-append">
-                    <button class="btn btn-primary" type="button" id="button-addon2">Send</button>
-                  </div>
-                </div>
+              <input type="text" id="data_4" name="data_4" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+              </div>
+              <div style="padding-bottom: 18px;"><input class="btn btn-primary" name="skip_Submit" value="SUBSCRIBE" type="submit"/></div>
+              <div>
+              <!--<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>-->
+              <script src="https://www.100forms.com/js/FORMKEY:3WLJR8252EKD" type="text/javascript"></script>
+              </div>
               </form>
-
+              <script type="text/javascript">
+              function validateForm() {
+              if (isEmpty(document.getElementById('data_4').value.trim())) {
+              alert('EMAIL is required!');
+              return false;
+              }
+              if (!validateEmail(document.getElementById('data_4').value.trim())) {
+              alert('EMAIL must be a valid email address!');
+              return false;
+              }
+              return true;
+              }
+              function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+              function validateEmail(email) {
+              var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+              return isEmpty(email) || re.test(email);
+              }
+              </script>
             </div>
-
           </div>
-
         </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
